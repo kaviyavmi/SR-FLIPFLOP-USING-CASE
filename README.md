@@ -34,15 +34,71 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-/* write all the steps invloved */
+1.Launch Quartus on your computer and create a new project: Go to File → New Project Wizard. Specify the project name, directory, and top-level entity name (e.g., SR_FlipFlop).
+
+2.Create the SR Flip-Flop Circuit and implement the SR Flip-Flop by writing VHDL/Verilog code. Go to File → New → Select Verilog File.
+
+3.Compile the Project Click on Processing → Start Compilation. Fix any syntax or schematic errors if present.
+
+4.Simulate the Circuit: Go to Tools → University Program VWF. Define the inputs for S, R, and CLK in the waveform editor. Run the simulation and observe the waveforms.
+
+5.Verify the Results. Compare the simulated results with the truth table for a SR Flip-Flop
+
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+module sr_ff (s, r, clk, rst, q);
+
+  input s, r, clk, rst;
+
+  output reg q;
+
+  
+  always @(posedge clk or posedge rst)
+ 
+ begin
+ 
+    if (rst)
+    
+      q <= 0; // Reset the flip-flop
+    
+    else
+ 
+ begin
+ 
+      case ({s, r}) // S and R control the behavior
+        
+        2'b00: q <= q;    // No change
+        
+        2'b01: q <= 0;    // Reset
+        
+        2'b10: q <= 1;    // Set
+        
+        2'b11: q <= 0;    // Invalid state, typically treated as reset
+      
+      endcase
+    
+    end
+  
+  end
+
+endmodule
+
+Developed by: V.M.Kaviya
+
+RegisterNumber: 24900714
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![WhatsApp Image 2024-12-11 at 19 35 42_bc8cd4a9](https://github.com/user-attachments/assets/fe74814e-3ce7-4a34-8e51-ac7194dbfdb4)
+
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![WhatsApp Image 2024-12-11 at 19 35 43_fe5c4798](https://github.com/user-attachments/assets/77e8cb34-c4b5-45d2-afad-558fed3a7944)
+
+
 **RESULTS**
+
+Implementation SR flipflop using verilog and validating their functionality using their functional tables is verified.
+
