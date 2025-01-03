@@ -84,7 +84,7 @@ RegisterNumber: 24900714
 ![WhatsApp Image 2024-12-11 at 19 35 42_bc8cd4a9](https://github.com/user-attachments/assets/fe74814e-3ce7-4a34-8e51-ac7194dbfdb4)
 
 
-**TIMING DIGRAMS FOR FLIP FLOPS**
+**TIMING DIAGRAMS FOR FLIP FLOPS**
 
 ![WhatsApp Image 2024-12-11 at 19 35 43_fe5c4798](https://github.com/user-attachments/assets/77e8cb34-c4b5-45d2-afad-558fed3a7944)
 
